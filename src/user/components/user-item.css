@@ -1,0 +1,26 @@
+#user-itemm {
+  height: 275px;
+}
+
+#user-itemm:hover {
+  transition: 2s;
+  background-color: slategray;
+  color: antiquewhite;
+}
+
+#user-itemm img {
+  /* border-radius: 50%; */
+  width: 93%;
+  height: 93%;
+  margin: auto auto;
+}
+
+#user-itemm .card-content {
+  font-weight: 400;
+  text-align: center;
+}
+
+.card .card-title {
+  font-size: 24px;
+  font-weight: 500;
+}
