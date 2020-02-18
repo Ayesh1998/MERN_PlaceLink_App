@@ -4,7 +4,7 @@ import UsersList from "../components/users-list";
 const Users = () => {
   const USERS = [
     {
-      id: 1,
+      id: "u1",
       name: "Ayesh",
       image:
         "https://d1nabgopwop1kh.cloudfront.net/hotel-asset/1646090232599180581_wh_8",
@@ -46,7 +46,7 @@ const Users = () => {
       places: 3
     },
     {
-      id: 2,
+      id: 16,
       name: "Ayesh3",
       image:
         "https://d1nabgopwop1kh.cloudfront.net/hotel-asset/1646090232599180581_wh_8",

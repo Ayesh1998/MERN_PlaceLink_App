@@ -1,0 +1,16 @@
+.inputss label {
+  padding-left: 7px;
+}
+
+.inputss {
+  margin-bottom: 0px;
+}
+
+.form-invalid {
+  color: red;
+}
+
+.errormg {
+  margin-left: 50px;
+  font-weight: 600;
+}

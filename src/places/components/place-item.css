@@ -1,0 +1,62 @@
+#user-item-place {
+  height: 540px;
+}
+
+#user-item-place:hover {
+  transition: 2s;
+  background-color: slategray;
+  color: antiquewhite;
+}
+
+#user-itemm-place img {
+  /* border-radius: 50%; */
+  width: 93%;
+  height: 93%;
+  margin: auto auto;
+}
+
+#user-itemm-place .card-content {
+  font-weight: 400;
+  text-align: center;
+}
+
+.card .card-title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#user-itemm-place img {
+  height: 100%;
+}
+
+#user-itemm-place .card-content {
+  margin: auto;
+}
+
+#user-itemm-place button {
+  margin: auto;
+}
+
+#view-on-map-place-items {
+  margin-right: 10px;
+}
+
+.place-item-actions {
+  margin-top: 30px;
+}
+
+#user-itemm-place img {
+  margin: 10px AUTO;
+}
+
+.card.medium {
+  height: 100%;
+}
+
+.modal-footer {
+  font-weight: 500;
+}
+
+.deleteed {
+  color: white;
+}

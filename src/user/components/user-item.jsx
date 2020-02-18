@@ -6,7 +6,7 @@ const UserItem = props => {
   const { name, image, places } = props;
 
   return (
-    <div className="user-item col s3">
+    <div className="user-item col m3 s6">
       <Link to={`/${props.id}/places`}>
         <div id="user-itemm" className="card small">
           <div class="card-image">
