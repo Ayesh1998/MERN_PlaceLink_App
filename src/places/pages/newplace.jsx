@@ -2,7 +2,7 @@ import React, { useCallback, useReducer } from "react";
 import InputField from "../../Forms/Components/inputs";
 import {
   VALIDATOR_REQUIRE,
-  VALIDATOR_MINLENGTH
+  VALIDATOR_MINLENGTH,
 } from "../../shared/util/validators";
 
 import "./newPlace.css";
@@ -22,9 +22,9 @@ const formReducer = (state, action) => {
         ...state,
         inputs: {
           ...state.inputs,
-          [action.inputId]: { value: action.value, isValid: action.isValid }
+          [action.inputId]: { value: action.value, isValid: action.isValid },
         },
-        isValid: formIsValid
+        isValid: formIsValid,
       };
     default:
       return state;
@@ -34,7 +34,7 @@ const formReducer = (state, action) => {
 const NewPlace = () => {
   const [formState, dispatch] = useReducer(formReducer, {
     inputs: {},
-    isValid: false
+    isValid: false,
   });
 
   const inputHandler = useCallback((id, value, isValid) => {
@@ -42,11 +42,11 @@ const NewPlace = () => {
       type: "INPUT_CHANGE",
       value: value,
       isValid: isValid,
-      inputId: id
+      inputId: id,
     });
   }, []);
 
-  const formSubmitHandler = event => {
+  const formSubmitHandler = (event) => {
     event.preventDefault();
     console.log(formState.inputs);
   };
@@ -60,9 +60,9 @@ const NewPlace = () => {
             type="text"
             element="input"
             icon="account_circle"
-            lable="Name"
+            lable="Title"
             lenths="m7 s12"
-            errorText="Enter a name"
+            errorText="Enter a title"
             validators={[VALIDATOR_REQUIRE()]}
             onInput={inputHandler}
           />
@@ -92,8 +92,9 @@ const NewPlace = () => {
           />
         </div>
         <button
-          className={`form-submit-btn-new-place btn waves-effect waves-light col m3 ${!formState.isValid &&
-            "disabled"}`}
+          className={`form-submit-btn-new-place btn waves-effect waves-light col m3 ${
+            !formState.isValid && "disabled"
+          }`}
         >
           Add Place
           <i className="material-icons right">send</i>

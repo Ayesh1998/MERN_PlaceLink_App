@@ -9,13 +9,13 @@ const inputReducer = (state, action) => {
       return {
         ...state,
         value: action.val,
-        isValid: validate(action.val, action.validators)
+        isValid: validate(action.val, action.validators),
       };
 
     case "TOUCH":
       return {
         ...state,
-        isTouch: true
+        isTouch: true,
       };
 
     default:
@@ -23,28 +23,29 @@ const inputReducer = (state, action) => {
   }
 };
 
-const InputField = props => {
+const InputField = (props) => {
   const [inputState, dispatch] = useReducer(inputReducer, {
     value: "",
     isValid: false,
-    isTouch: false
+    isTouch: false,
   });
 
   useEffect(() => {
     props.onInput(props.id, inputState.value, inputState.isValid);
   }, [props.id, props.value, inputState.isValid, props.onInput]);
 
-  const changeHandler = e => {
+  const changeHandler = (e) => {
+    console.log(e.target.value);
     dispatch({
       type: "CHANGE",
       val: e.target.value,
-      validators: props.validators
+      validators: props.validators,
     });
   };
 
   const touchHandler = () => {
     dispatch({
-      type: "TOUCH"
+      type: "TOUCH",
     });
   };
 
@@ -70,9 +71,9 @@ const InputField = props => {
 
   return (
     <div
-      className={`inputss input-field col ${
-        props.lenths
-      } ${!inputState.isValid && inputState.isTouch && "form-invalid"}`}
+      className={`inputss input-field col ${props.lenths} ${
+        !inputState.isValid && inputState.isTouch && "form-invalid"
+      }`}
     >
       <i class="material-icons prefix"> {props.icon} </i>
       <label htmlFor={props.id}> {props.lable} </label>
